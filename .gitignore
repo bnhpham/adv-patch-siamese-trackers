@@ -1,0 +1,49 @@
+# Datasets (download separately - see README)
+code/data
+
+# Generated adversarial patches
+code/patch/*
+!code/patch/patch_best.png
+!code/patch/patch_best.pt
+code/patch_siamrpnpp
+code/see_train_data
+
+# Generated evaluation outputs (images/videos)
+code/results/siamrpn/images
+code/results/siamrpn/video
+code/results/dasiamrpn/video
+code/results/siamrpnpp/video
+code/results/siamban/video
+code/results/siamcar/video
+code/results/physical
+
+# Pretrained tracker weights (download separately - see README)
+code/models/**/*.pth
+code/models/**/*.model
+
+# Vendored third-party tracker source (clone separately - see README)
+code/models/siamrpnpp/pysot/
+code/models/siamcar/pysot/
+code/models/siamban/siamban/
+
+# Derived from upstream code without a license (see README)
+code/models/siamrpn/siamrpn.py
+code/evaluate_video_siamrpn.py
+code/evaluate_video_siamcar.py
+code/models/siamcar/config.yaml
+
+# Not shared
+code/create_patch_siamrpnpp.py
+code/create_patch_siamrpnpp2.py
+code/models/siamrpn/batched.py
+
+# Python
+__pycache__/
+*.pyc
+
+# Personal notes
+NOTES.md
+README_0.md
+REPORT_0.md
+
+CLAUDE.md
