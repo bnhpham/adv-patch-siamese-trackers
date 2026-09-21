@@ -20,7 +20,7 @@ This project crafts a printable adversarial patch that hijacks a Siamese visual 
 
 The following footage shows a transferability test of SiamRPN-trained patch pasted digitally to steal a SiamRPN++ tracker's attention. MobileNetV2 was used as backbone.
 
-https://github.com/bnhphamduc/adv-patch-siamese-trackers/assets/adv_patch_SiamRPNPP_mobilenetv2.mp4
+https://github.com/bnhpham/adv-patch-siamese-trackers/blob/main/assets/adv_patch_SiamRPNPP_mobilenetv2.mp4
 
 ## Transferability Evaluation
 
