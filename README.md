@@ -4,7 +4,7 @@ This project crafts a printable adversarial patch that hijacks a Siamese visual 
 
 ## Key Features
 
-- **Patch Training**  (`create_patch.py`): Optimizes a small (e.g. 60x60px) adversarial patch against a SiamRPN tracker using a loss function inspired by the work "[Universal, Transferable Adversarial Perturbations for Visual Object Trackers](https://link.springer.com/chapter/10.1007/978-3-031-25056-9_27)" by Nakka et al. (ECCV 2022). The loss consists of a shift-loss pulling the tracker's predicted box toward the patch's own position as well as a fool-loss that suppresses the tracker's confidence in the true target. The training includes changes to scaling, rotation and blur to increase physical robustness.
+- **Patch Training**  (`create_patch.py`): Optimizes a small (e.g. 60x60px) adversarial patch against a SiamRPN tracker using a loss function inspired by the work [Universal, Transferable Adversarial Perturbations for Visual Object Trackers](https://link.springer.com/chapter/10.1007/978-3-031-25056-9_27) by Nakka et al. (ECCV 2022). The loss consists of a shift-loss pulling the tracker's predicted box toward the patch's own position as well as a fool-loss that suppresses the tracker's confidence in the true target. The training includes changes to scaling, rotation and blur to increase physical robustness.
 - **Transferability Evaluation**: Testing the SiamRPN-trained patch on more refined and robust trackers, each driven by its own official implementation. Our experiment includes:
   | Tracker | Paper | GitHub |
   |---|---|---|
