@@ -1,4 +1,4 @@
-# Adversarial Patch Attack Against Siamese Visual Trackers
+# Adversarial Patch Attack Against Siamese Visual Object Trackers
 
 This project crafts a printable adversarial patch that hijacks a Siamese visual object tracker's attention away from its real target, and evaluates how well that patch transfers to other trackers it was never optimized against.
 
@@ -38,7 +38,7 @@ The patch was tested in the digital as well as in the physical world.
 | SiamCAR (GOT-10k) | :x: | :x: |
 | SiamCAR (LaSOT) | :white_check_mark: | :white_check_mark: |
 
-:white_check_mark: denotes that the patch generally works on the tracker, whereas :x: means that the patch has no effect on the tracker. :heavy_minus_sign: means that attacking is possible, but significantly more difficult and only under certain conditions, e.g., slow movements of the patch.
+:white_check_mark: indicates that the patch generally works on the tracker, while :x: denotes that the patch is not effective enough to distract it. :heavy_minus_sign: means that an attack is possible but considerably more difficult and requires more restrictive conditions, such as slow patch movements.
 
 ## Project File Overview
 
@@ -66,7 +66,7 @@ code/
 
 Note: `models/siamrpnpp/`, `models/siamcar/`, and `models/siamban/` each also expect a vendored copy of their upstream tracker's source code alongside the loader script (`pysot/` or `siamban/`). These are not included in this repository and must be cloned additionally (see Setup & Installation).
 
-## Files not included
+### Files not included
 
 Four files are deliberately not part of this repository as the upstream projects they are derived from do not publish a license, so we are not allowed to redistribute them:
 
@@ -170,6 +170,14 @@ Draw the initial box around the target with the mouse on the first frame and con
 - `--log` writes the box of every frame to a csv file.
 
 No patch is pasted digitally here. The printed patch is part of the camera image. Keep in mind that the patch was trained on digital data of a full-body person and without a printability term, so its size relative to the target, the print quality and the lighting influence the result.
+
+## Run Your Own Experiments
+
+The trained patch is provided in this repository in both `.pt` and `.png` format and can be applied to your own tracking system without cloning this repository or training the patch yourself.
+
+<p align="center">
+  <img src="code/patch/patch_best.png" width="400"/>
+</p>
 
 ## To Be Added:
 - **Footage of Physical Adversarial Patch Attack**.
